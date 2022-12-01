@@ -37,6 +37,16 @@ const RouterLayout: FC<RouterLayoutProps> = ({ children }) => {
           </RouterLayoutContentShowreel>
         </RouterLayoutContent>
       </Suspense>
+      {/* <Box>
+        <img
+          src={require("../../assets/Images/background-string-top.png")}
+          alt="EVENT AGENCY"
+        />
+        <img
+          src={require("../../assets/Images/background-string-bottom.png")}
+          alt="FULL-CYCLE"
+        />
+      </Box> */}
     </RouterLayoutContainer>
   );
 };

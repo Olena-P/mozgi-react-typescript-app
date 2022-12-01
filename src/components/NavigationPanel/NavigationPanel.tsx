@@ -87,10 +87,10 @@ const NavigationPanel = () => {
             style={{
               position: "absolute",
               top: "50vh",
-              right: "10px",
+              right: "20px",
               transform: "rotate(90deg)",
             }}
-            variant="default"
+            variant="large_bolt"
           >
             what?
           </NavigationLink>
@@ -98,10 +98,10 @@ const NavigationPanel = () => {
             onClick={() => navigate("/who")}
             sx={{
               position: "absolute",
-              bottom: "12px",
+              bottom: "20px",
               right: "50vw",
             }}
-            variant="default"
+            variant="large_bolt"
           >
             who?
           </NavigationLink>
@@ -110,10 +110,10 @@ const NavigationPanel = () => {
             sx={{
               position: "absolute",
               top: "50vh",
-              left: "10px",
+              left: "20px",
               transform: "rotate(90deg)",
             }}
-            variant="default"
+            variant="large_bolt"
           >
             where?
           </NavigationLink>

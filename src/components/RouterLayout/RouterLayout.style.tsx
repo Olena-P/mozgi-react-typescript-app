@@ -14,7 +14,7 @@ export const RouterLayoutContent = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "578px",
+  width: "1023px",
   height: "578px",
   [theme.breakpoints.down("lg")]: {
     width: "482px",
