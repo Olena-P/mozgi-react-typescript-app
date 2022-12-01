@@ -5,9 +5,14 @@ const Home = () => {
   return (
     <Typography
       sx={{
+        fontStyle: "normal",
+        fontWeight: "700",
+        fontSize: "82px",
+        lineHeight: "110%",
         textAlign: "center",
+        textTransform: "uppercase",
+        color: "#373737",
       }}
-      variant="h2"
     >
       FULL-CYCLE EVENT AGENCY{" "}
     </Typography>

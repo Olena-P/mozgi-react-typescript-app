@@ -5,7 +5,8 @@ const GlobalStyles = (
   <Global
     styles={{
       body: {
-        fontFamily: theme.typography.fontFamily,
+        fontFamily: "Grtsk Giga",
+        fontWeight: "bold",
         backgroundColor: theme.palette.case.contrast.gray1,
         overflow: "hidden",
         lineHeight: "10px !important",
