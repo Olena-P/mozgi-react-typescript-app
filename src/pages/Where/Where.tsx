@@ -1,22 +1,8 @@
-import { Typography } from "@mui/material";
 import React from "react";
+import { WherePageTitle } from "./Where.style";
 
 const Where = () => {
-  return (
-    <Typography
-      sx={{
-        fontStyle: "normal",
-        fontWeight: "700",
-        fontSize: "82px",
-        lineHeight: "110%",
-        textAlign: "center",
-        textTransform: "uppercase",
-        color: "#373737",
-      }}
-    >
-      Where
-    </Typography>
-  );
+  return <WherePageTitle>Where</WherePageTitle>;
 };
 
 export default Where;

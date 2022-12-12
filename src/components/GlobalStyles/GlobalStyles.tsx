@@ -6,6 +6,7 @@ const GlobalStyles = (
     styles={{
       body: {
         fontFamily: "Grtsk Giga",
+        fontStyle: "normal",
         fontWeight: "bold",
         backgroundColor: theme.palette.case.contrast.gray1,
         overflow: "hidden",
