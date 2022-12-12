@@ -44,7 +44,9 @@ const NavigationPanel = () => {
       </Link>
 
       {isMobileDisplay ? (
-        <Box sx={{ position: "absolute", top: "10px", right: "10px" }}>
+        <Box
+          sx={{ position: "absolute", top: "10px", right: "10px", zIndex: "3" }}
+        >
           <Button
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
@@ -74,23 +76,22 @@ const NavigationPanel = () => {
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="/who" style={{}}>
+              <Link to="/where" style={{}}>
                 Where?
               </Link>
             </MenuItem>
           </Menu>
         </Box>
       ) : (
-        <Box>
+        <Box sx={{ zIndex: "3" }}>
           <NavigationLink
             onClick={() => navigate("/what")}
             style={{
               position: "absolute",
               top: "50vh",
-              right: "20px",
+              right: "-10px",
               transform: "rotate(90deg)",
             }}
-            variant="large_bolt"
           >
             what?
           </NavigationLink>
@@ -101,7 +102,6 @@ const NavigationPanel = () => {
               bottom: "20px",
               right: "50vw",
             }}
-            variant="large_bolt"
           >
             who?
           </NavigationLink>
@@ -110,10 +110,9 @@ const NavigationPanel = () => {
             sx={{
               position: "absolute",
               top: "50vh",
-              left: "20px",
-              transform: "rotate(90deg)",
+              left: "-20px",
+              transform: "rotate(-90deg)",
             }}
-            variant="large_bolt"
           >
             where?
           </NavigationLink>

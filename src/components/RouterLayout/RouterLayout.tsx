@@ -1,13 +1,17 @@
 import React, { FC, Suspense } from "react";
 import { Outlet } from "react-router";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 import {
   RouterLayoutContainer,
   RouterLayoutContent,
   RouterLayoutContentBackground,
   RouterLayoutContentShowreel,
+  TickerBox,
+  TickerItemBottom,
+  TickerItemTop,
 } from "./RouterLayout.style";
 import NavigationPanel from "../NavigationPanel";
+import { HorizontalTicker } from "react-infinite-ticker";
 
 type RouterLayoutProps = {
   children: JSX.Element;
@@ -20,33 +24,38 @@ const RouterLayout: FC<RouterLayoutProps> = ({ children }) => {
       <Outlet />
       <Suspense fallback={<>...</>}>
         <RouterLayoutContent>
-          <RouterLayoutContentBackground />
+          <Box sx={{ position: "relative", maxWidth: "578px" }}>
+            <RouterLayoutContentBackground />
+            <RouterLayoutContentShowreel>
+              <img
+                src={require("../../assets/Images/buttons.png")}
+                alt="Showreel"
+              />
+            </RouterLayoutContentShowreel>
+          </Box>
           <Box
             sx={{
               position: "absolute",
-              zIndex: "2",
+              zIndex: "3",
             }}
           >
             {children}
           </Box>
-          <RouterLayoutContentShowreel>
-            <img
-              src={require("../../assets/Images/buttons.png")}
-              alt="Showreel"
-            />
-          </RouterLayoutContentShowreel>
         </RouterLayoutContent>
       </Suspense>
-      {/* <Box>
-        <img
-          src={require("../../assets/Images/background-string-top.png")}
-          alt="EVENT AGENCY"
-        />
-        <img
-          src={require("../../assets/Images/background-string-bottom.png")}
-          alt="FULL-CYCLE"
-        />
-      </Box> */}
+
+      <TickerBox>
+        <TickerItemTop>
+          <HorizontalTicker duration={25000} reverse={false}>
+            <div>FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY</div>
+          </HorizontalTicker>
+        </TickerItemTop>
+        <TickerItemBottom>
+          <HorizontalTicker duration={25000}>
+            <div>FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY</div>
+          </HorizontalTicker>
+        </TickerItemBottom>
+      </TickerBox>
     </RouterLayoutContainer>
   );
 };
