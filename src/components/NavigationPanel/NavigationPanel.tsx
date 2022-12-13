@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
-import { LogoImg, NavigationLink } from "./NavigationPanel.style";
+import { Logo, NavigationLink } from "./NavigationPanel.style";
+import { ReactComponent as LogoIcon } from "../../assets/Images/mozgi.svg";
 
 const NavigationPanel = () => {
   const navigate = useNavigate();
@@ -38,9 +39,12 @@ const NavigationPanel = () => {
           position: "absolute",
           top: "16px",
           left: "46vw",
+          zIndex: "3",
         }}
       >
-        <LogoImg src={require("../../assets/Images/logo.png")} alt="Mozgi" />
+        <Logo>
+          <LogoIcon />
+        </Logo>
       </Link>
 
       {isMobileDisplay ? (

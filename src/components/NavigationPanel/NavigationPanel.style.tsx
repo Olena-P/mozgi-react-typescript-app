@@ -1,6 +1,7 @@
 import { Link, styled } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
-export const LogoImg = styled("img")(({ theme }) => ({
+export const Logo = styled(Typography)(({ theme }) => ({
   width: "83px",
   height: "46px",
   [theme.breakpoints.down("lg")]: {

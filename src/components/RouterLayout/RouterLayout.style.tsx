@@ -56,7 +56,7 @@ export const RouterLayoutContentShowreel = styled(Box)(({ theme }) => ({
     transform: "rotate(-360deg)",
   },
 
-  "& img": {
+  "& svg": {
     width: "118px",
     height: "118px",
 
@@ -92,11 +92,11 @@ export const TickerItemTop = styled(Box)(({ theme }) => ({
   fontSize: "52px",
   lineHeight: "110%",
   textTransform: "uppercase",
-  opacity: "0.1",
+  opacity: "0.3",
   color: "transparent",
   "-webkit-text-stroke-width": " 1px",
   "-webkit-text-stroke-color": "#616161",
-  transform: "rotate(150deg)",
+  transform: "rotate(154deg)",
 
   [theme.breakpoints.down("lg")]: {
     left: "50px",
@@ -127,7 +127,7 @@ export const TickerItemTop = styled(Box)(({ theme }) => ({
 
 export const TickerItemBottom = styled(Box)(({ theme }) => ({
   position: "absolute",
-  top: "55%",
+  top: "58%",
   left: "-100px",
   width: "130vw",
 
@@ -137,11 +137,11 @@ export const TickerItemBottom = styled(Box)(({ theme }) => ({
   fontSize: "52px",
   lineHeight: "110%",
   textTransform: "uppercase",
-  opacity: "0.1",
+  opacity: "0.3",
   color: "transparent",
   "-webkit-text-stroke-width": " 1px",
   "-webkit-text-stroke-color": "#616161",
-  transform: "rotate(-30deg)",
+  transform: "rotate(-26deg)",
 
   [theme.breakpoints.down("lg")]: {
     left: "50px",

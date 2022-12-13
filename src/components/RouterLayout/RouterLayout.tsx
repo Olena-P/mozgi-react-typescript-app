@@ -12,6 +12,7 @@ import {
 } from "./RouterLayout.style";
 import NavigationPanel from "../NavigationPanel";
 import { HorizontalTicker } from "react-infinite-ticker";
+import { ReactComponent as Schowreel } from "../../assets/Images/showreel.svg";
 
 type RouterLayoutProps = {
   children: JSX.Element;
@@ -23,25 +24,24 @@ const RouterLayout: FC<RouterLayoutProps> = ({ children }) => {
       <NavigationPanel />
       <Outlet />
       <Suspense fallback={<>...</>}>
-        <RouterLayoutContent>
-          <Box sx={{ position: "relative", maxWidth: "578px" }}>
-            <RouterLayoutContentBackground />
-            <RouterLayoutContentShowreel>
-              <img
-                src={require("../../assets/Images/buttons.png")}
-                alt="Showreel"
-              />
-            </RouterLayoutContentShowreel>
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              zIndex: "3",
-            }}
-          >
-            {children}
-          </Box>
-        </RouterLayoutContent>
+        <>
+          <RouterLayoutContent>
+            <Box sx={{ position: "relative", maxWidth: "578px" }}>
+              <RouterLayoutContentBackground />
+              <RouterLayoutContentShowreel>
+                <Schowreel />
+              </RouterLayoutContentShowreel>
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                zIndex: "3",
+              }}
+            >
+              {children}
+            </Box>
+          </RouterLayoutContent>
+        </>
       </Suspense>
 
       <TickerBox>
